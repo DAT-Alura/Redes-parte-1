@@ -37,3 +37,35 @@ Quando eu digito tracert e vemos que uma máquina retornou a informação (*), o
 
 - Provavelmente o administrador da máquina desabilitou a resposta ao nosso chamado, para evitar um grande volume de tráfego na máquina bem como por questões de segurança.
 - Quando nós temos uma máquina que retornou (*) e passou a informação para uma próxima máquina, isso provavelmente indica que o administrador dessa máquina desabilitou a resposta ao nosso chamado. O que acontece seria que esse tipo de teste pode ser interpretado como uma tentativa de “scanear” possíveis portas abertas e vulnerabilidades que possam existir, caso seja usado por um usuário malicioso, pode ser usada como uma forma de reconhecimento da rede dessa possível vítima para que assim possa explorar possíveis falhas.
+
+# Aula 2
+
+Qual a responsabilidade do servidor DNS?
+
+- Traduz URLs para endereços IP
+- Os servidores __DNS__ são chamados de __Domain Name Servers__ e sua função é realizar o __“mapeamento”__ entre endereço IP e url (ex: www.google.com). Dessa forma, se estamos digitando www.google.com no browser, o servidor DNS está fazendo a tradução entre o nome da url e o endereço IP.
+
+Qual o nome que damos quando configuramos um endereço IP manualmente em nosso computador?
+
+- IP estático
+- __Quando inserimos um IP em uma máquina__, ela passa a atuar com aquele endereço IP, esse tipo de inserção manual de endereço IP é chamado de __IP estático__, pois fixamos que ele tenha o valor que inserimos.
+
+Qual principal uso do nslookup?
+
+- Verificar traduções de nomes de domínios e endereços IP e isolar problemas entre as duas partes
+- O Nslookup pode ser usado para descobrirmos o endereço IP de um domínio, bem como saber detalhes mais avançados de DNS, para saber se nosso serviço está sendo direcionado para a máquina de destino, por exemplo.
+
+Ao digitar nslookup www.google.com eu recebo uma mensagem de resposta não autoritativa, por que recebo essa mensagem?
+
+- Porque quem respondeu foi uma __máquina da minha rede local__ que __guardou a informação do site que havia acessado previamente__ e ela que está respondendo pela requisição.
+- Uma vez que eu já acessei o site antes, essa máquina guarda em sua memória, para não ter que ficar fazendo essas requisições na internet o tempo todo. Dessa forma, a minha máquina que respondeu não tem autoridade sobre esse domínio, não é minha máquina que possui o registro do www.google.com.
+
+Como funciona o ping?
+
+- Ele manda uma requisição para a máquina que procuramos (Echo Request) e aguarda uma informação de retorno (Echo Reply)
+- O ping possui dentro dele um protocolo chamado __ICMP__, ele vai mandar uma requisição (Echo request) e aguarda uma resposta (Echo reply).
+
+Qual equipamento podemos usar para conectar vários computadores?
+
+- Hub
+- O __Hub__ é um equipamento utilizado para interconectar diversos dispositivos finais. __NAT__ é um método de tradução de endereços privados e públicos. __Servidor__ é uma máquina centralizada que oferece serviços a um cliente (ex: computador). __Máscara de rede__ é usado para determinar se dois equipamentos estão na mesma rede.
