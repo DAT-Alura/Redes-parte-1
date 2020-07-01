@@ -69,3 +69,55 @@ Qual equipamento podemos usar para conectar vários computadores?
 
 - Hub
 - O __Hub__ é um equipamento utilizado para interconectar diversos dispositivos finais. __NAT__ é um método de tradução de endereços privados e públicos. __Servidor__ é uma máquina centralizada que oferece serviços a um cliente (ex: computador). __Máscara de rede__ é usado para determinar se dois equipamentos estão na mesma rede.
+
+# Aula 3
+
+Quais são os dois tipos de cabos que usamos para conexão?
+
+- Cabo direto e cabo cruzado
+- Caso tenhamos o mesmo padrão de cores na duas pontas do cabo, chamamos de cabo direto, pois as mesmas cores estão nas mesmas posições nas duas pontas. Caso tenhamos um padrão de cores diferente em cada ponta do cabo, teremos o que chamamos de cabo cruzado.
+
+O que caracteriza um cabo cruzado?
+
+- Um cabo que possui os fios internos em posições diferentes em cada ponta
+- Quando temos um padrão de cores diferente em cada ponta do cabo, teremos o que chamamos de cabo cruzado.
+
+O que caracteriza um cabo direto?
+
+- Um cabo com a mesma sequência de cor nas mesmas posições nas duas pontas do cabo
+- Quando temos um padrão de cores iguais nas duas pontas do cabo, teremos o que chamamos de cabo direto
+
+Quais são os dois padrões feitos pela TIA?
+
+- T568A e T568B
+- O padrão de cores feitos pela TIA seria T568A e T568B, sendo que a T568A possui a sequência de cores, nesta ordem: branco e verde, verde, branco e laranja, azul, branco e azul, laranja, branco e marrom, marrom e a T568B: branco e laranja, laranja, branco e verde, azul, branco e azul, verde, branco e marrom, marrom
+
+Qual tipo de cabo usamos para fazer a conexão entre dois computadores?
+
+- Tipo cruzado
+- Pelo fato de termos dois computadores, eles tem o mesmo tipo de placa de rede e vão transmitir os sinais nas mesmas posições. Dessa forma é necessário realizar essa compatibilidade entre os sinais de transmissão e recepção e isso é obtido através do cabo cruzado.
+
+Onde é transmitido os sinais nas placas de rede dos computadores por padrão?
+
+- Fios 1 e 2
+- As placas de rede dos computadores transmitem, por padrão, nas posições 1 e 2.
+
+Onde é recebido os sinais nas placas de rede dos computadores por padrão?
+
+- Fios 3 e 6
+- As placas de rede dos computadores recebem por padrão nas posições 3 e 6.
+
+Onde é transmitido os sinais nas placas de rede dos hubs por padrão?
+
+- Fios 3 e 6
+- As placas de rede dos hubs transmitem por padrão nas posições 3 e 6
+
+Onde é recebido os sinais nas placas de rede dos hubs por padrão?
+
+- Fios 1 e 2
+- As placas de rede dos hubs recebem por padrão nas posições 1 e 2.
+
+Em um projeto precisei interconectar dois computadores diretamente, pelo fato de não ter cabo cruzado, resolvi fazer o teste com cabo direto e consegui “pingar” o outro computador. Qual é a provável razão para isso ter acontecido?
+
+- Provavelmente as placas de rede possuem um padrão auto-MDIX que é capaz de detectar que colocamos um cabo “errado”, mas consegue realizar a correção das polaridades via software
+- Algumas placas de rede mais modernas possuem o padrão auto-MDIX, dessa forma, se as duas placas de rede estiverem configuradas, elas poderão corrigir essa questão da polaridade e se comunicarem.
