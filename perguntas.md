@@ -148,3 +148,34 @@ Porque não foi possível visualizar a informação que o usuário (vítima) dig
 
 - A informação estava criptografada
 - O youtube usa em seu site um sistema de criptografia das informações, onde o protocolo TLS é responsável por essa atividade. Pelo fato das informações, estarem criptografadas não foi possível reconstruir a informação e visualizar o que o usuário estava digitando.
+
+# Aula 5
+
+O que é o protocolo ARP?
+
+- Quando eu não conheço um dispositivo eu lanço esse protocolo para procurar o IP que eu quero me comunicar. A máquina buscada por sua vez vai retornar informando seu endereço MAC.
+- __O ARP é o protocolo utilizado para fazer o mapeamento entre o endereço IP e o endereço MAC de um dispositivo__. Isso é necessário porque o MAC encontra-se um nível abaixo do IP e eu preciso dele para poder transmitir as informações. Em redes de computadores, temos protocolos que possuem hierarquias diferentes. Para poder chegar até o IP que está na camada 3, eu preciso passar pelo MAC que está na camada 2, pense como se fosse escalar uma pirâmide, não dá pra chegar ao topo sem passar pelo meio dela!
+
+Qual equipamento veio para substituir os hubs?
+
+- Switches
+
+Qual é a principal diferença entre os Hubs e os Switches?
+
+- O Hub não consegue aprender onde um equipamento está localizado, o Switch sim.
+- Os hubs não conseguem __aprender o endereço MAC__ das máquinas, já os Switches possuem essa função.
+
+Como o Switch aprende onde um equipamento está localizado?
+
+- Quando um dispositivo quer se comunicar com outro, ele vai necessitar passar pelo Switch e ele informa dentro do pacote qual é __seu endereço MAC__ e o __Switch grava essa informação em sua memória__.
+- Os dispositivos ao se comunicarem passam pelo Switch e ao passar pelo Switch ele grava em sua memória quem está conectado em qual porta.
+
+Qual é uma forma de ataque usada para conseguir informações passadas no Switch destinadas a outro usuário?
+
+- Colocar vários endereços MAC falsos para __“lotar” a memória do Switch__ e fazer com que ele __atue como um Hub__.
+- Métodos usados por usuários maliciosos seria de inserir vários endereços MAC falsos para “lotar” a memória do Switch, uma vez que a memória esteja cheia, o Switch não vai conseguir definir quem está onde e ele passa a atuar como um Hub.
+
+Como podemos nos prevenir contra esse ataque?
+
+- Configurar a opção de segurança na porta, para que assim fique limitada a receber uma quantidade máxima de endereços MAC, caso ultrapasse, a porta é desabilitada
+- Podemos configurar a porta do Switch para aceitar um número máximo de endereços MAC, ao ultrapassar esse limite a porta é desligada e o ataque não teria sucesso.
