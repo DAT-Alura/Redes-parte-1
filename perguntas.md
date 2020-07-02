@@ -180,7 +180,7 @@ Como podemos nos prevenir contra esse ataque?
 - Configurar a opção de segurança na porta, para que assim fique limitada a receber uma quantidade máxima de endereços MAC, caso ultrapasse, a porta é desabilitada
 - Podemos configurar a porta do Switch para aceitar um número máximo de endereços MAC, ao ultrapassar esse limite a porta é desligada e o ataque não teria sucesso.
 
-Aula 6
+# Aula 6
 
 Qual a função da máscara de rede?
 
@@ -219,3 +219,94 @@ Para que serve o default gateway?
 
 - Ele é a "porta de saída" da minha rede
 - O default gateway é o endereço IP o qual será responsável por encaminhar pacotes para redes externas, é o IP do meu roteador.
+
+# Aula 7
+
+Quais são as classes de endereços IP que podem ser endereçadas para máquinas?
+
+- Classe A, B e C
+```
+A IETF (Internet Engineering Task Force) determinou que existiriam ao todo 5 classes de endereços IP, indo de ordem alfabética da classe A até a classe E. Porém as duas últimas classes não são usadas para serem endereçadas as máquinas. A classe D seria usada para multicast (termo usado quando queremos nos comunicar com somente algumas máquinas de nossa rede) e a classe E seria uma classe experimental. Portanto as classes de IP que podem ser endereçadas para máquinas seriam a classe A, B e C.
+```
+
+Como eu identifico que um endereço IP está em uma classe?
+
+- Pelo valor do primeiro intervalo (octeto)
+```
+Para sabermos em qual classe um endereço IP se encontra, temos que analisar o primeiro octeto e ver dentro de qual range ele estaria. (Classe A, B ou C).
+```
+
+O endereço IP 187.77.45.8 estaria dentro de qual classe, considerando que usa máscara de rede padrão?
+
+- Classe B
+```
+A classe "A" possui o primeiro octeto variando de 1 a 127, a classe "B" possui o primeiro octeto variando de 128 a 191 e a classe "C" possui o primeiro octeto variando de 192 a 223. Dessa forma pelo fato do número 187 se encontrar dentro de 128 a 191, sabemos que é um endereço da classe "B".
+```
+
+O que seria o endereço 127.0.0.1? Como ele é conhecido?
+
+- É um endereço __interno da placa de rede__, usado para testar se os protocolos TCP/IP estão funcionando. Ele é conhecido como __endereço de loopback__, pois o sinal é enviado e recebido por ele mesmo.
+```
+O endereço 127.0.0.1 seria uma faixa de endereço IP reservada, esse seria um endereço interno da placa de rede para realizar testes e verificar se ela está de fato validando os protocolos TCP/IP.
+```
+
+O que são IPs privados?
+
+- São IPs que são usados somente para comunicação na rede local, não posso acessar a internet
+```
+Os endereços IP privados são usados para comunicação somente em minha rede local, de acordo com a especificação, eles não podem ser usados para comunicação na internet por exemplo.
+```
+
+Se eu tenho IP privado na minha máquina, como posso acessar a internet?
+
+- Através do método de tradução de endereços IPs privados para públicos, chamado de NAT
+```
+Isso acontece porque nosso roteador possui a configuração chamada NAT, essa configuração vai converter o endereço IP privado que temos em nossas máquinas para IP públicos que nosso provedor de serviços nos fornece.
+```
+
+Qual foi a evolução do IPv4?
+
+- IPv6
+```
+A evolução do IPv4 seria a versão 6 do protocolo, que seria conhecida como IPv6.
+```
+
+Por que foi necessário o IPv6?
+
+- Porque os endereços públicos do IPv4 se esgotaram
+```
+O endereço IPv6 foi necessário porque os endereços IPv4 públicos chegaram a um fim por conta da grande popularidade da internet, smartphones, tablets, etc.
+```
+
+Dado que o endereço IP da máquina 7.8.7.8 possui máscara de rede 255.0.0.0, determine seu endereço de rede e broadcast (Lembre-se da regra, endereço de rede e broadcast):
+
+- Rede: 7.0.0.0; Broadcast: 7.255.255.255
+```
+Descobrir endereço de rede que esse endereço IP está inserido:
+
+Se recortarmos o 255 da máscara de rede e inserirmos o octeto correspondente do endereço IP, teremos: 7.0.0.0 :)
+Descobrir o endereço de broadcast da rede:
+
+Pegamos o endereço de rede e recortamos os 0’s (originais da máscara) e colocamos 255 no lugar, teremos então: 7.255.255.255
+Dessa forma, por exemplo o endereço IP: 7.0.0.255 é válido porque é maior que o endereço de rede (7.0.0.0) e menor que o de broadcast (7.255.255.255)
+```
+
+Dado que o endereço IP da máquina 135.44.3.21 possui máscara de rede 255.255.0.0, determine seu endereço de rede e broadcast (Lembre-se da regra, endereço de rede e broadcast):
+
+- Rede: 135.44.0.0; Broadcastr: 135.44.255.255
+```
+Descobrir endereço de rede que esse endereço IP está inserido:
+
+Se recortarmos o 255 da máscara de rede e inserirmos os octetos correspondentes do endereço IP, teremos: 135.44.0.0
+Descobrir o endereço de broadcast da rede:
+
+Pegamos o endereço de rede e recortamos os 0’s (originais da máscara) e colocamos 255 no lugar, teremos então: 135.44.255.255
+Dessa forma, por exemplo o endereço IP: 135.44.0.255 é válido por que é maior que o endereço de rede (135.44.0.0) e menor que o de broadcast (135.44.255.255)
+```
+
+O que caracteriza uma comunicação broadcast?
+
+- Comunicação com todos os dispositivos da minha rede
+```
+Broadcast seria um termo usado quando a comunicação é feita para todos os dispositivos que estão na mesma rede.
+```
