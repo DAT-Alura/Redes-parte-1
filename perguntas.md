@@ -333,3 +333,12 @@ Quando um cliente não possui um endereço IP e está configurado para receber I
 ```
 Quando um cliente não possui endereço IP ele não sabe a quem perguntar, então ele precisa sair perguntando para todo mundo que está na mesma rede quem poderá fornecer um endereço IP. Quando essa comunicação é feita para todos os dispositivos, chamamos isso de Broadcast.
 ```
+
+# Aula 9
+
+Que configurações fizemos no projeto para que fosse possível que os computadores digitassem www.google.com no browser e tivéssemos a página do google na tela?
+
+- Tivemos que configurar o servidor DNS no DHCP do roteador para atribuir esse endereço do DNS para as máquinas (clientes).
+```
+Os computadores não sabem quem é o servidor DNS, nós precisamos informar para eles quem é o servidor que eles devem procurar.
+```
