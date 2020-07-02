@@ -310,3 +310,26 @@ O que caracteriza uma comunicação broadcast?
 ```
 Broadcast seria um termo usado quando a comunicação é feita para todos os dispositivos que estão na mesma rede.
 ```
+
+# Aula 8
+
+Para que serve um servidor DHCP?
+
+- Para atribuir IP a máquinas (clientes) de forma dinânima
+```
+Os servidores DHCP (Dynamic Host Configuration Protocol) alocam dinamicamente endereços IPs a clientes (máquinas).
+```
+
+Como é conhecida essa forma de atribuição de IP pelo DHCP?
+
+- IP dinâmico
+```
+Quando um endereço IP é atribuído a uma máquina (cliente), dizemos que a configuração foi dinamicamente alocado. Os servidores DHCP normalmente possuem o que chamamos de “lease time”, ou seja possui um tempo de alocação de um endereço IP a uma máquina, quando esse tempo é expirado é preciso ocorrer uma renovação de endereço IP. Por isso ele é dinamicamente alocado :)
+```
+
+Quando um cliente não possui um endereço IP e está configurado para receber IP dinâmico, como ele faz a requisição para que alguém forneça um endereço IP?
+
+- Broadcast
+```
+Quando um cliente não possui endereço IP ele não sabe a quem perguntar, então ele precisa sair perguntando para todo mundo que está na mesma rede quem poderá fornecer um endereço IP. Quando essa comunicação é feita para todos os dispositivos, chamamos isso de Broadcast.
+```
