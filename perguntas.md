@@ -121,3 +121,30 @@ Em um projeto precisei interconectar dois computadores diretamente, pelo fato de
 
 - Provavelmente as placas de rede possuem um padrão auto-MDIX que é capaz de detectar que colocamos um cabo “errado”, mas consegue realizar a correção das polaridades via software
 - Algumas placas de rede mais modernas possuem o padrão auto-MDIX, dessa forma, se as duas placas de rede estiverem configuradas, elas poderão corrigir essa questão da polaridade e se comunicarem.
+
+# Aula 4
+
+Qual seria duas das principais limitações do Hub?
+
+- Segurança e lentidão
+- Os hubs não conseguem aprender onde está localizado cada máquina, dessa forma, ele __repassa a informação para todas as demais máquinas conectadas__. Isso quer dizer que caso ocorra um fluxo intenso de tráfego na rede, teremos essa informação sendo encaminhada para todos os demais usuários causando __lentidão na rede__. Além disso, __quando usuários mandam a informação__ destinada para um usuário específico, __os demais usuários recebem essa informação__, causando assim uma __vulnerabilidade de segurança__.
+
+Qual a principal utilização do programa Wireshark?
+
+- Analisar protocolos para resolver problemas em redes
+- O Wireshark tem como principal utilização analisar protocolos que trafegam na rede com o intuito de verificar problemas que possam existir.
+
+Qual desses é um protocolo utilizado para criptografar minha informação?
+
+- TLS
+- TLS (Transport Layer Security) seria um protocolo de criptografia utilizado para a segurança da informação. Ele seria a evolução do protocolo SSL (Secure Sockets Layer)
+
+Qual seria a responsabilidade do protocolo TCP?
+
+- Transportar minha informação
+- O protocolo TCP encontra-se acima da camada onde o IP está localizado e ele é responsável por realizar o transporte da minha informação. Além do protocolo TCP, essa camada possui também outro protocolo bastante conhecido, o UDP.
+
+Porque não foi possível visualizar a informação que o usuário (vítima) digitou na página do youtube?
+
+- A informação estava criptografada
+- O youtube usa em seu site um sistema de criptografia das informações, onde o protocolo TLS é responsável por essa atividade. Pelo fato das informações, estarem criptografadas não foi possível reconstruir a informação e visualizar o que o usuário estava digitando.
