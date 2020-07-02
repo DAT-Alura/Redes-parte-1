@@ -179,3 +179,43 @@ Como podemos nos prevenir contra esse ataque?
 
 - Configurar a opção de segurança na porta, para que assim fique limitada a receber uma quantidade máxima de endereços MAC, caso ultrapasse, a porta é desabilitada
 - Podemos configurar a porta do Switch para aceitar um número máximo de endereços MAC, ao ultrapassar esse limite a porta é desligada e o ataque não teria sucesso.
+
+Aula 6
+
+Qual a função da máscara de rede?
+
+- Dividir o endereço IP em dois grupos (rede e máquina) e a partir daí poder definir quando outro dispositivo estará na mesma rede que eu.
+- A máscara de rede é usada como forma de comparação para determinar se dois equipamentos estão na mesma rede. Para isso ela vai dividir o endereço IP em dois grupos, de rede e hosts (máquinas).
+
+Esses dois dispositivos:
+
+1- IP: 192.168.0.3 ; Máscara: 255.255.255.0
+
+2- IP: 192.169.0.4 ; Máscara: 255.255.255.0
+
+Estão na mesma rede?
+
+- Não
+- Lembre-se, a máscara de rede está dizendo que para dois equipamentos estarem na mesma rede, os 3 primeiros octetos do IP devem ser iguais, uma vez que suas máscaras são 255.255.255.0.
+
+Se eu tenho um endereço IP: 33.44.55.66 e máscara de rede: 255.0.0.0, qual desses endereços abaixo vai caracterizar que outro dispositivo está na mesma rede que eu?
+
+Lembre-se: - 255 = Rede - 0 = Host
+
+- IP: 33.255.4.3 ; Máscara: 255.0.0.0
+- O 1° octeto do endereço IP é 33, logo só ele me importa para analisar se outro dispositivo está na mesma rede que eu, os demais são números da máquina. As outras opções começam com número diferente de 33, o que caracteriza que a máquina está em outra rede.
+
+Qual equipamento é usado para comunicar com redes externas?
+
+- Roteador
+- A função do roteador é interconectar redes encaminhando seus pacotes de dados, os Switches e hubs são usados somente para conexão na minha rede local.
+
+Para conectar um computador com um roteador, qual tipo de cabo eu uso?
+
+- Cabo cruzado
+- Lembre-se da regra: - Dois equipamentos iguais estão interconectados? Se sim, eles tem o mesmo tipo de placa, então devo usar o cabo crossover. Se não, faço a pergunta abaixo - Dois equipamentos diferentes estão conectados? Essa conexão representa o que naturalmente o equipamento foi desenvolvido para fazer? Por exemplo ao interconectar o computador ao hub e o computador ao switch, o computador foi feito para se comunicar com várias máquinas e o hub e switch foram feitos para interconectar diversas máquinas. Dessa forma ao conectarmos os dois, vamos estar explorando o que os dois foram fabricados para fazer naturalmente. Porém o roteador foi feito para interconectar redes, se eu coloco somente um dispositivo, não terei como inserir outros dispositivos para o roteador encaminhar os pacotes e então a totalidade de sua função não está sendo explora. Devemos usar cabo crossover.
+
+Para que serve o default gateway?
+
+- Ele é a "porta de saída" da minha rede
+- O default gateway é o endereço IP o qual será responsável por encaminhar pacotes para redes externas, é o IP do meu roteador.
